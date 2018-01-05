@@ -9,6 +9,7 @@ pipeline {
               echo 'prova'
             }
             
+            build(job: 'nonesiste', quietPeriod: 2)
           }
         }
         stage('Build 2') {
