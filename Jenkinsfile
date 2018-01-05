@@ -19,7 +19,7 @@ pipeline {
         stage('Stage 2 parallel') {
           steps {
             catchError() {
-              error 'err'
+              error 'errore'
             }
             
           }
