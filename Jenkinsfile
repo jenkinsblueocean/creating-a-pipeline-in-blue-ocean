@@ -7,11 +7,13 @@ pipeline {
           steps {
             catchError() {
               script {
-                start = new Date()
-                echo 'prova ${start}'
+                def start = new Date()
+                echo "prova ${start}"
                 build 'nonesiste'
               }
+              
             }
+            
           }
         }
         stage('Stage 2 parallel') {
