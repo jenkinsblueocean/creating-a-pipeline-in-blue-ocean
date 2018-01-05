@@ -6,12 +6,12 @@ pipeline {
         stage('Build') {
           steps {
             catchError() {
-              start = new Date()
-              echo 'prova ${start}'
-              build 'nonesiste'
+              script {
+                start = new Date()
+                echo 'prova ${start}'
+                build 'nonesiste'
+              }
             }
-            
-            error 'error'
           }
         }
         stage('Stage 2 parallel') {
