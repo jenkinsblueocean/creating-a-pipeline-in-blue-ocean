@@ -2,11 +2,23 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      steps {
-        catchError() {
-          echo 'prova'
+      parallel {
+        stage('Build') {
+          steps {
+            catchError() {
+              echo 'prova'
+            }
+            
+          }
         }
-        
+        stage('Build 2') {
+          steps {
+            catchError() {
+              echo 'prova build2'
+            }
+            
+          }
+        }
       }
     }
   }
