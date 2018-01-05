@@ -18,8 +18,10 @@ pipeline {
         }
         stage('Stage 2 parallel') {
           steps {
-            echo 'stage 2 parallel'
-            error 'errore'
+            catchError() {
+              error 'err'
+            }
+            
           }
         }
       }
