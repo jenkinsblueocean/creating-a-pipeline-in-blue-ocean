@@ -10,6 +10,7 @@ pipeline {
               build 'nonesiste'
             }
             
+            error 'error'
           }
         }
         stage('Stage 2 parallel') {
