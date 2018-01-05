@@ -6,7 +6,8 @@ pipeline {
         stage('Build') {
           steps {
             catchError() {
-              echo 'prova'
+              start = new Date()
+              echo 'prova ${start}'
               build 'nonesiste'
             }
             
